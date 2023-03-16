@@ -85,7 +85,7 @@ Syntax
    >>key1: “value1”, //scalar value 
    >>key2: “value”,  
    >>key3: function() {
-    >>  //functions 
+      //functions 
    >>}, 
    >>key4:[“content1”, “content2”] //collection  
 >}; 
@@ -155,19 +155,19 @@ In TypeScript, enums, or enumerated types, are data structures of constant lengt
 14.
 Explain the TypeScript class syntax.
 
-class Student {  
-    studCode: number;  
-    studName: string;  
-  
-    constructor(code: number, name: string) {  
-            this.studName = name;  
-            this.studCode = code;  
+    class Student {  
+        studCode: number;  
+        studName: string;  
+    
+        constructor(code: number, name: string) {  
+                this.studName = name;  
+                this.studCode = code;  
+        }  
+    
+    getGrade() : string {  
+            return "A+" ;  
+        }  
     }  
- 
-   getGrade() : string {  
-        return "A+" ;  
-    }  
-}  
 
 
 
