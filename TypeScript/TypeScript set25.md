@@ -35,18 +35,19 @@ void represents the return value of functions which don't return a value. Whenev
 5. What is an unknown type, and when to use it in TypeScript?
 For type-safety
 As it’s given in the introduction, an unknown type variable can only be assigned to another unknown type variable or a variable of type any. unknown type is displayed as “undefined”.
-let a: unknown;
+    let a: unknown;
     console.log(a);
     let b: unknown = a;
     console.log(b);
     let c: any = a;
     console.log(c);
 
- let unknown: unknown;
+    let unknown: unknown;
     let num: number = unknown; // Error
     console.log(num);
-error TS2322: Type 'unknown' is not assignable to type 'number'.
-let num: number = a; // Error 
+
+    error TS2322: Type 'unknown' is not assignable to type 'number'.
+    let num: number = a; // Error 
 
 
 
@@ -62,18 +63,18 @@ there are three different keywords to define variables: var , let , and const .
 7. Provide the syntax of a function with the type annotations.
 
 Using the function keyword:
-let add = function(a,b) { return a + b }
+    let add = function(a,b) { return a + b }
 
 
 Using Arrow functions, It takes the form:
-let add = (a,b) => { return a + b }
+    let add = (a,b) => { return a + b }
 
 
 Functions defined in either of these ways can be called like any other function:
-console.log(add(1,2)) // logs 3 
+    console.log(add(1,2)) // logs 3 
 
 after adding type annotation to function expression
-let add: (a: number, b: number) => number = (a,b) => { return a + b } 
+    let add: (a: number, b: number) => number = (a,b) => { return a + b } 
 
 
 
@@ -81,14 +82,14 @@ let add: (a: number, b: number) => number = (a,b) => { return a + b }
 8. How to create objects in TypeScript?
 An object is an instance which contains set of key value pairs. The values can be scalar values or functions or even array of other objects. The syntax is given below −
 Syntax
->var object_name = { 
-   >>key1: “value1”, //scalar value 
-   >>key2: “value”,  
-   >>key3: function() {
-      //functions 
-   >>}, 
-   >>key4:[“content1”, “content2”] //collection  
->}; 
+    var object_name = { 
+        key1: “value1”, //scalar value 
+        key2: “value”,  
+        key3: function() {
+            //functions 
+        }, 
+        key4:[“content1”, “content2”] //collection  
+    }; 
 
 
 
@@ -96,15 +97,15 @@ Syntax
 
 9. How to specify optional properties in TypeScript?
 
-type Foo = {
-    bar?: number;
-}
+    type Foo = {
+        bar?: number;
+    }
 
-const a: Foo = {}; // This is now OK!
+    const a: Foo = {}; // This is now OK!
 
-const b: Foo = { bar: 11 }; // This is still OK.
+    const b: Foo = { bar: 11 }; // This is still OK.
 
-const c: Foo = { bar: undefined }; // This is also OK, somehow…? 
+    const c: Foo = { bar: undefined }; // This is also OK, somehow…? 
 
 
 
@@ -129,20 +130,20 @@ So, we can use 'null' to define the variable's data-type or initialize the varia
 	
 The never type represents the type of values that never occur. For instance, never is the return type for a function expression or an arrow function expression that always throws an exception or one that never returns. Variables also acquire the type never when narrowed by any type guards that can never be true.
 
-// Function returning never must not have a reachable end point
-function error(message: string): never {
-  throw new Error(message);
-}
- 
-// Inferred return type is never
-function fail() {
-  return error("Something failed");
-}
- 
-// Function returning never must not have a reachable end point
-function infiniteLoop(): never {
-  while (true) {}
-} 
+    // Function returning never must not have a reachable end point
+    function error(message: string): never {
+        throw new Error(message);
+    }
+    
+    // Inferred return type is never
+    function fail() {
+        return error("Something failed");
+    }
+    
+    // Function returning never must not have a reachable end point
+    function infiniteLoop(): never {
+        while (true) {}
+    } 
 
 
 
