@@ -81,6 +81,7 @@ after adding type annotation to function expression
 
 8. How to create objects in TypeScript?
 An object is an instance which contains set of key value pairs. The values can be scalar values or functions or even array of other objects. The syntax is given below −
+
 Syntax
     var object_name = { 
         key1: “value1”, //scalar value 
@@ -100,11 +101,8 @@ Syntax
     type Foo = {
         bar?: number;
     }
-
     const a: Foo = {}; // This is now OK!
-
     const b: Foo = { bar: 11 }; // This is still OK.
-
     const c: Foo = { bar: undefined }; // This is also OK, somehow…? 
 
 
