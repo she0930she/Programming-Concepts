@@ -1,35 +1,36 @@
-Type Script Question set25: 
-1.
-What are the primitive types in TypeScript?
+# Type Script Question set25: 
+
+
+1. What are the primitive types in TypeScript?
 JavaScript has eight data types. Seven primitive types and one object Data type. The primitive types are number, string, boolean, bigint, symbol, undefined, and null. Everything else is an object in JavaScript.
 The TypeScript Type System supports all of them and also brings its own special types. They are unknown, any, void & never.
 
 
 
-2.
-Explain how the arrays work in TypeScript.
+
+2. Explain how the arrays work in TypeScript.
 TypeScript supports arrays, similar to JavaScript. There are two ways to declare an array:
-1. Using square brackets. This method is similar to how you would declare arrays in JavaScript.
+    1. Using square brackets. This method is similar to how you would declare arrays in JavaScript.
 let fruits: string[] = ['Apple', 'Orange', 'Banana'];
-2. Using a generic array type, Array<elementType>.
+    2. Using a generic array type, Array<elementType>.
 let fruits: Array<string> = ['Apple', 'Orange', 'Banana'];
 
 
 
 
-3.
-What is any type, and when to use it?
+
+3. What is any type, and when to use it?
 The any type in TypeScript is a generic type used when a variable's type is unknown or when the variable's type hasn't yet been defined.
 
 
-4.
-What is void, and when to use the void type?
+
+4. What is void, and when to use the void type?
 void represents the return value of functions which don't return a value. Whenever you see a function returning void , you are explicitly told there is no return value. All functions with no return value have an inferred return type of void . This should not be confused with a function returning undefined or null .
 
 
 
-5.
-What is an unknown type, and when to use it in TypeScript?
+
+5. What is an unknown type, and when to use it in TypeScript?
 For type-safety
 As it’s given in the introduction, an unknown type variable can only be assigned to another unknown type variable or a variable of type any. unknown type is displayed as “undefined”.
 let a: unknown;
@@ -48,15 +49,15 @@ let num: number = a; // Error
 
 
 
-6.
-What are the different keywords to declare variables in TypeScript?
+
+6. What are the different keywords to declare variables in TypeScript?
 there are three different keywords to define variables: var , let , and const .
 	Variable declared using let, const cannot be re-declared.
 
 
 
-7.
-Provide the syntax of a function with the type annotations.
+
+7. Provide the syntax of a function with the type annotations.
 
 Using the function keyword:
 let add = function(a,b) { return a + b }
